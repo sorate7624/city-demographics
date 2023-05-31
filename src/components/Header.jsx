@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <HeaderDiv>
       <Link>
-        <Title>도시별 인구 통계</Title>
+        <Title data-text="도시별 인구 통계"></Title>
       </Link>
     </HeaderDiv>
   );

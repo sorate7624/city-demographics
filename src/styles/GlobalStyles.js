@@ -8,10 +8,16 @@ export const GlobalStyles = createGlobalStyle`
         --tea-green-color: #D2FDBB;
         --light-yellow-color: #FBFDE1;
         --pastel-yellow-color: #FDFD97;
+        --gray-navy-color1: #27374D;
+        --gray-navy-color2: #526D82;
+        --gray-navy-color3: #9DB2BF;
+        --gray-navy-color4: #DDE6ED;
+        --navy-color: #24355F;
+        --blue-color: #2CA9FD;
         --font-reqular: 1rem;
         --font-small: 0.8rem;
         background-color: #f6f6f6;
-        color: #17181B;
+        color: #fff;
     }
     ${reset}
     *{
@@ -32,8 +38,26 @@ export const GlobalStyles = createGlobalStyle`
         height: 100%;
     }
     body {
-        font-family: 'Noto Sans KR', sans-serif;
         justify-content: center;
+        font-family: 'Nanum Gothic Coding', monospace;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // background-image: url(../../public/people-group.jpg);
+        background-size: contain;
+        // opacity: 0.2;
+        z-index: -1;
+        background-color: var(--navy-color);
+    }
+
+    #root {
+        max-width: 1280px;
     }
     h2 {
         margin: 0;
