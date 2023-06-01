@@ -1,7 +1,9 @@
-import { createGlobalStyle } from "styled-components";
+import {
+    createGlobalStyle
+} from "styled-components";
 import reset from "styled-reset";
 
-export const GlobalStyles = createGlobalStyle` 
+export const GlobalStyles = createGlobalStyle ` 
     :root {
         --pastel-green-color: #77DD76;
         --apple-color: #A6ECA8;
@@ -14,9 +16,11 @@ export const GlobalStyles = createGlobalStyle`
         --gray-navy-color4: #DDE6ED;
         --navy-color: #24355F;
         --blue-color: #2CA9FD;
+        --green-color: #19E2A1;
         --font-reqular: 1rem;
         --font-small: 0.8rem;
         background-color: #f6f6f6;
+        height: fit-content;
         color: #fff;
     }
     ${reset}
@@ -38,8 +42,11 @@ export const GlobalStyles = createGlobalStyle`
         height: 100%;
     }
     body {
+        position: relative;
         justify-content: center;
         font-family: 'Nanum Gothic Coding', monospace;
+        background-color: var(--navy-color);
+        z-index: -2;
     }
 
     body::before {
@@ -49,15 +56,15 @@ export const GlobalStyles = createGlobalStyle`
         left: 0;
         right: 0;
         bottom: 0;
-        // background-image: url(../../public/people-group.jpg);
+        background: url(../../public/world-map.png) no-repeat center;
         background-size: contain;
-        // opacity: 0.2;
+        opacity: 0.2; /* 투명도 값을 조정할 부분 */
         z-index: -1;
-        background-color: var(--navy-color);
     }
 
     #root {
         max-width: 1280px;
+        width: calc(100% - 10rem);
     }
     h2 {
         margin: 0;
