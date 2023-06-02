@@ -87,3 +87,12 @@ export const Loading = styled.div `
             animation-delay: 0.6s;
   }
 `;
+
+export const Error = styled.p `
+  color: var(--red-color);
+  font-size: 2rem;
+`;
+
+export const Summary = styled.div `
+  font-size: 1.2rem;
+`;

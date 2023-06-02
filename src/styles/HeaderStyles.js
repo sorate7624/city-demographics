@@ -12,5 +12,21 @@ export const Title = styled.h1`
   font-weight: bold;
   cursor: pointer;
   transition: .6s;
-  color: #fff;
+  color: var(--blue-color);
+
+  &:before {
+    color: #fff;
+    content: attr(data-hover);
+    position: absolute;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  &:hover:before, &fucus:before {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0;
+  }
 `;

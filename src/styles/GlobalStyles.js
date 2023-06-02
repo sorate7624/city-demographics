@@ -17,6 +17,7 @@ export const GlobalStyles = createGlobalStyle `
         --navy-color: #24355F;
         --blue-color: #2CA9FD;
         --green-color: #19E2A1;
+        --red-color: #FF7249;
         --font-reqular: 1rem;
         --font-small: 0.8rem;
         background-color: #f6f6f6;
@@ -56,9 +57,9 @@ export const GlobalStyles = createGlobalStyle `
         left: 0;
         right: 0;
         bottom: 0;
-        background: url(../../public/world-map.png) no-repeat center;
+        background: url(./world-map.png) no-repeat center;
         background-size: contain;
-        opacity: 0.2; /* 투명도 값을 조정할 부분 */
+        opacity: 0.2;
         z-index: -1;
     }
 

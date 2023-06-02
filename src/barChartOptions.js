@@ -1,4 +1,4 @@
-export const chartOptions = {
+export const barChartOptions = {
   responsive: true,
   interaction: {
     mode: 'index',
