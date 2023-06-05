@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <HeaderDiv>
       <StyledLink>
-        <img src="/south-korea.png" alt="south-korea-map" />
+        <img src="./south-korea.png" alt="south-korea-map" />
         <Title>
           CITY
           <br />

@@ -32,7 +32,6 @@ export const StyledLink = styled(Link)
   img {
     width: 5rem;
     margin-right: .5rem;
-    filter: brightness(0) invert(1);
   }
 
   &:hover {
