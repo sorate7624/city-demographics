@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -29,6 +30,7 @@ export const CityBarChart = ({ accessToken }) => {
   const [ageData, setAgeData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const isMobile = useMediaQuery({ maxWidth: 800 });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -100,7 +102,11 @@ export const CityBarChart = ({ accessToken }) => {
       {error ? (
         <Error>Error: {error}</Error>
       ) : loading ? (
-        <Bar options={barChartOptions} data={cityData} />
+        isMobile ? (
+          <Bar options={barChartOptions} data={cityData} height={'500px'} />
+        ) : (
+          <Bar options={barChartOptions} data={cityData} />
+        )
       ) : (
         <Loading>
           <p>

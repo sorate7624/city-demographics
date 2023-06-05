@@ -1,32 +1,47 @@
 import styled from "styled-components";
+import {
+  Link
+} from 'react-router-dom';
 
-export const HeaderDiv = styled.div`
-  margin: 3rem 0;
+export const HeaderDiv = styled.div `
+  width: 24rem;
+  margin-top: 3rem;
+
+  @media (max-width: 800px) {
+    width: auto;
+  }
 `;
 
-export const Title = styled.h1` 
+export const Title = styled.h1 ` 
   position: relative;
-  font-size: 4em;
+  font-size: 2rem;
   display: table;
-  margin: 2rem auto;
   font-weight: bold;
-  cursor: pointer;
   transition: .6s;
-  color: var(--blue-color);
+  color: #fff;
 
-  &:before {
-    color: #fff;
-    content: attr(data-hover);
-    position: absolute;
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-    transition: transform 0.3s, opacity 0.3s;
+  @media (max-width: 800px) {
+    font-size: 1.5rem;
+  }
+`;
+
+export const StyledLink = styled(Link)
+`
+  display: flex;
+
+  img {
+    width: 5rem;
+    margin-right: .5rem;
+    filter: brightness(0) invert(1);
   }
 
-  &:hover:before, &fucus:before {
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    transform: scale(0.9);
-    opacity: 0;
+  &:hover {
+    cursor: default;
+  }
+
+  @media (max-width: 800px) {
+    img {
+      width: 3.5rem;
+    }
   }
 `;

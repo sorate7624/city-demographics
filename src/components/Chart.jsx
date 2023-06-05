@@ -4,7 +4,7 @@ import { ChartDiv } from '../styles/ChartStyles';
 import { FilterContext } from './FilterContext';
 import { TotalBarChart } from './TotalBarChart';
 import { CityBarChart } from './CityBarChart';
-import { AgePieChart } from './AgePieChart';
+import { AgeDoughnutChart } from './AgeDoughnutChart';
 
 export const Chart = () => {
   const { selectedYear, selectedCity, selectedAge } = useContext(FilterContext);
@@ -59,7 +59,7 @@ export const Chart = () => {
       ) : (
         <>
           {selectCity && <CityBarChart accessToken={accessToken} />}
-          {selectAge && <AgePieChart accessToken={accessToken} />}
+          {selectAge && <AgeDoughnutChart accessToken={accessToken} />}
           {!selectCity && !selectAge && (
             <TotalBarChart accessToken={accessToken} />
           )}

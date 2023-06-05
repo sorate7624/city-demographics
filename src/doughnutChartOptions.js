@@ -1,4 +1,4 @@
-export const pieChartOptions = {
+export const doughnutChartOptions = {
   plugins: {
     legend: {
       position: 'top',

@@ -1,9 +1,10 @@
-export const barChartOptions = {
+export let barChartOptions = {
   responsive: true,
   interaction: {
     mode: 'index',
     intersect: false,
   },
+  indexAxis: 'x',
   scales: {
     x: {
       grid: {
@@ -33,3 +34,11 @@ export const barChartOptions = {
     },
   },
 };
+
+// 미디어 쿼리 적용
+if (window.matchMedia('(max-width: 800px)').matches) {
+  barChartOptions = {
+    ...barChartOptions,
+    indexAxis: 'y',
+  };
+}

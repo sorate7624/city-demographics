@@ -1,14 +1,14 @@
 import { useContext, useEffect, useState } from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Pie } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import axios from 'axios';
 import { Loading, Error, Summary } from '../styles/ChartStyles';
-import { pieChartOptions } from '../pieChartOptions';
+import { doughnutChartOptions } from '../doughnutChartOptions';
 import { FilterContext } from './FilterContext';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const AgePieChart = ({ accessToken }) => {
+export const AgeDoughnutChart = ({ accessToken }) => {
   const { selectedYear, selectedCity, selectedAge } = useContext(FilterContext);
   const [totalPopulation, setTotalPopulation] = useState(0);
   const [totalAvgAge, setTotalAvgAge] = useState(0);
@@ -114,7 +114,7 @@ export const AgePieChart = ({ accessToken }) => {
         <Error>Error: {error}</Error>
       ) : loading ? (
         <>
-          <Pie options={pieChartOptions} data={pieData} />
+          <Doughnut options={doughnutChartOptions} data={pieData} />
           <Summary>
             <p>
               총 인구 수: <span>{totalPopulation}</span>명

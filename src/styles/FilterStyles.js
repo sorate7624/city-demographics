@@ -3,51 +3,68 @@ import styled, { keyframes } from "styled-components";
 const rotate = keyframes`
   0%{
       transform: rotate(0deg);
-      border-radius: 0px;
-  }
-  50%{ 
-      border-radius: 100px;
   }
   100%{
       transform: rotate(350deg);
-      border-radius: 0px;
   }
 `;
 
 export const FilterDiv = styled.div`
   position: relative;
   display: flex;
-  max-width: 700px;
-  height: 60px;
+  width: calc(100% - 26rem);
+  min-width: 39rem;
+  height: 3.75rem;
   align-items: center;
   justify-content: center;
   background-color: var(--blue-color);
-  border-radius: 10px;
+  border-radius: 0.625rem;
   padding: 0.5rem;
-  margin: 0 auto;
+  margin-right: 1.438rem;
+  margin-top: 3rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-  &:before, &:after{
+  &:after{
     content: "";
     position: absolute;
-    left: -53px;
-    width: 0px;
-    height: 0px;
-    border-bottom: 29px solid transparent;
-    border-top: 29px solid transparent;
-    border-left: 29px solid transparent;
-    border-right: 29px solid var(--blue-color);
+    right: -3.313rem;
+    width: 0;
+    height: 0;
+    border-bottom: 1.813rem solid transparent;
+    border-top: 1.813rem solid transparent;
+    border-left: 1.813rem solid var(--blue-color);
+    border-right: 1.813rem solid transparent;
   }
-  &:after {
-    left: auto;
-    right: -53px;
-    border-left: 29px solid var(--blue-color);
-    border-right: 29px solid transparent;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    padding: 2rem;
+    background: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &:after{
+      content: none;
+    }
   }
 `;
 
 export const SelectArea = styled.div`
   margin-right: 1rem;
+
+  @media (max-width: 600px) {
+    margin-bottom: 1rem;
+
+    &:nth-child(3) {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 export const Label = styled.label` 
@@ -83,5 +100,11 @@ export const RefreshButton = styled.button`
 
   svg {
     font-size: 1.2rem;
+  }
+
+  @media (max-width: 800px) {
+    &:hover {
+      animation: none;
+    }
   }
 `;

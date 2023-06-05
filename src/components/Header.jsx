@@ -1,12 +1,16 @@
-import { Link } from 'react-router-dom';
-import { HeaderDiv, Title } from '../styles/HeaderStyles';
+import { HeaderDiv, Title, StyledLink } from '../styles/HeaderStyles';
 
 export const Header = () => {
   return (
     <HeaderDiv>
-      <Link>
-        <Title data-hover="도시별 인구 통계">도시별 인구 통계</Title>
-      </Link>
+      <StyledLink>
+        <img src="/south-korea.png" alt="south-korea-map" />
+        <Title>
+          CITY
+          <br />
+          DEMOGRAPHICS
+        </Title>
+      </StyledLink>
     </HeaderDiv>
   );
 };
