@@ -78,7 +78,15 @@ export const Select = styled.select`
   margin-right: 0.2rem;
   outline: none;
   border-bottom: 1px solid #fff;
+  color: #fff;
   cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("./arrow.png") no-repeat right center;
+  background-size: 0.8rem;
+  padding-right: 1.4rem;
 `;
 
 export const Option = styled.option` 
@@ -99,6 +107,7 @@ export const RefreshButton = styled.button`
   }
 
   svg {
+    color: #fff;
     font-size: 1.2rem;
   }
 

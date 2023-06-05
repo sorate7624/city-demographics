@@ -1145,7 +1145,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   margin-right: 0.2rem;
   outline: none;
   border-bottom: 1px solid #fff;
+  color: #fff;
   cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("./arrow.png") no-repeat right center;
+  background-size: 0.8rem;
+  padding-right: 1.4rem;
 `,ce=Tt.option` 
 `,R2=Tt.button` 
   padding: 0;
@@ -1162,6 +1170,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   }
 
   svg {
+    color: #fff;
     font-size: 1.2rem;
   }
 
